@@ -1,0 +1,63 @@
+// ----------------------------
+// --- color variables
+// ----------------------------
+// -------- real color
+$white: #FFFFFF;
+$black: #000000;
+$dark-grey: #333333;
+$light-grey: #ff0000;
+
+// -------- background
+$color-background-primary: $white;
+$color-background-secondary: $dark-grey;
+$color-background-tertiary: $light-grey;
+
+// -------- text
+$color-text-heading: $dark-grey;
+$color-text-heading-invert: $white;
+
+$color-text: $dark-grey;
+$color-text-invert: $white;
+
+$color-text-strong: $color-text;
+$color-text-strong-invert: $color-text-invert;
+
+$color-text-link: $dark-grey;
+$color-text-link-visited: $dark-grey;
+$color-text-link-hover: $dark-grey;
+
+// -------- object
+$color-shadow: rgba ($dark-grey, .25);
+$border-color: $dark-grey;
+
+// ----------------------------
+// --- font
+// ----------------------------
+// -------- google font : montserrat
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,500,500i);
+//$nomdelafont: 'nom de la font', sans-serif;
+// -------- local font : advent pro
+//@include font('nom de la font', 'chemin de la font', 'weight', 'style');
+// $nomdelafont : 'nom de la font', sans-serif;
+// -------- font-weight
+$hairline-weight: 100;
+$thin-weight: 200;
+$light-weight: 300;
+$regular-weight: 400;
+$medium-weight: 500;
+$semibold-weight: 600;
+$bold-weight: 700;
+$xbold-weight: 800;
+$heavy-weight: 900;
+
+// -------- font-style
+$roman: normal;
+$italic: italic;
+
+// -------- font-size
+$fz-small: 1.2;
+$fz-regular: 1.6;
+$fz-large: 2.4;
+$fz-x-large: 3.2;
+$fz-xx-large: 4.8;
+$fz-xxx-large: 6.4;
