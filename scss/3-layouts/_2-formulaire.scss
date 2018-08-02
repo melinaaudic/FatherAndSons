@@ -1,0 +1,52 @@
+form {
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-family: $AdventPro;
+    box-shadow: 0;
+    outline: none;
+    @include font-size($fz-regular);
+    @include input-placeholder {
+      @include font-size($fz-regular);
+    }
+    &[type="email"] {
+      @include border-all(1px, solid, $border-color-dark);
+      margin-bottom: 10px;
+    }
+    &[type="submit"] {
+      @include border-all(0, solid, $border-color-light);
+      background-color: $color-background-tertiary;
+      color: $color-text-invert;
+      @include font-size(3.2);
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: $light-weight;
+    }
+    &:focus {
+      background-color: lighten($color-background-secondary, 10%);
+    }
+  }
+  [class="field_missing"] {
+    color: $color-background-tertiary;
+  }
+
+}
+
+.timer {
+  p {
+    margin-bottom: 0;
+
+  }
+  p:first-child,
+  p:last-child {
+    font-weight: $bold-weight;
+    text-transform: uppercase;
+    @include font-size(2.1);
+  }
+  p:nth-child(2) {
+    font-weight: $medium-weight;
+    @include font-size(3.9);
+
+  }
+}

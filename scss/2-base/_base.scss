@@ -1,0 +1,79 @@
+html {
+  font-family: $AdventPro;
+  font-weight: $regular-weight;
+  font-size: 62.5%;
+  color: $dark-grey;
+  text-align: justify;
+  * {
+    box-sizing: border-box;
+
+  }
+}
+
+.hide {
+  display: none;
+}
+
+header,
+footer {
+  padding-top: 5px;
+  padding-bottom: 5px
+}
+
+.page-section {
+  padding-top: $double-gutter-width;
+  padding-bottom: $double-gutter-width;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  @include font-size($fz-regular);
+  @include border-all(1px, solid, $border-color-light);
+  text-transform: uppercase;
+  padding: 5px 0;
+  width: 100%;
+  margin-top: $half-gutter-width;
+  margin-bottom: $half-gutter-width;
+  &:before {
+    content: ">> ";
+    @include font-size($fz-regular - 0.2)
+  }
+  &:after {
+    content: " <<";
+    @include font-size($fz-regular - 0.2)
+  }
+}
+
+%quote {
+  content: "‘‘";
+  position: absolute;
+  width: 22px;
+  height: 30px;
+  @include font-size(10.4);
+  font-weight: $light-weight;
+  letter-spacing: -13px;
+  color: darken( $color-background-secondary, 10%);
+}
+
+blockquote {
+  p {
+    &:before {
+      @extend %quote;
+      line-height: 67px;
+      text-indent: -32px;
+    }
+    &:after {
+      @extend %quote;
+      transform: rotate(180deg);
+      line-height: 87px;
+      text-indent: -10px;
+
+    }
+  }
+  cite {
+    font-weight: $bold-weight;
+  }
+}

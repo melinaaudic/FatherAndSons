@@ -1,0 +1,28 @@
+.background {
+  &.dark {
+    background-color: $color-background-primary;
+    color: $color-text-invert;
+    a {
+      color: $white;
+      &:hover {
+        color: $color-text-link-light;
+      }
+      &:visited {
+        color: $color-text-link-visited;
+      }
+    }
+
+  }
+  &.light {
+    background-color: $color-background-secondary;
+    a {
+      color: $color-text-link-dark;
+      &:hover {
+        color: $color-text-link-hover;
+      }
+      &:visited {
+        color: $color-text-link-visited;
+      }
+    }
+  }
+}

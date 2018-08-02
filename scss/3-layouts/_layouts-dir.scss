@@ -1,5 +1,13 @@
 /* LAYOUTS */
-// Import your "layouts" styles here
 
+// Import your "layouts" styles here
 // for example, to import a file called "_header.scss"...
-//@import "header"
+@import "0-header-footer";
+@import "1-offre";
+@import "2-formulaire";
+@import "3-collection";
+@import "4-conseils";
+@import "5-temoignages";
+@import "6-magasin";
+@import "7-reference";
+@import "8-vetement";

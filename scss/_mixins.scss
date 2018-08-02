@@ -1,16 +1,22 @@
 // ----------------------------
 // --- font face
 // ----------------------------
-@mixin font($font-family, $font-file, $font-weight, $font-style) {
+@mixin font($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+  $extmods: ( eot: "?",
+  svg: "#" + str-replace($name, " ", "_"));
+  $formats: ( otf: "opentype",
+  ttf: "truetype");
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
   @font-face {
-    font-family: $font-family;
-    src: url($font-file+'.eot');
-    src: url($font-file+'.eot?#iefix') format('embedded-opentype'),
-    url($font-file+'.woff') format('woff'),
-    url($font-file+'.ttf') format('truetype'),
-    url($font-file+'.svg#aller') format('svg');
-    font-weight: $font-weight;
-    font-style: $font-style;
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
   }
 }
 
@@ -41,4 +47,47 @@
   &::-webkit-input-placeholder {
     @content;
   }
+}
+
+// ----------------------------
+// --- border
+// ----------------------------
+@mixin border-all($width,
+$style,
+$color) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}
+
+// ----------------------------
+// --- background image
+// ----------------------------
+@mixin background-image($url,
+$color,
+$height) {
+  background-image: $url;
+  background-repeat: no-repeat;
+  color: $color;
+  height: $height;
+}
+
+// ----------------------------
+// --- grayscale
+// ----------------------------
+@mixin grayscale($percent) {
+  filter: grayscale($percent);
+  -webkit-filter: grayscale($percent);
+  -moz-filter: grayscale($percent);
+  -ms-filter: grayscale($percent);
+  -o-filter: grayscale($percent);
+}
+// ----------------------------
+// --- Margin
+// ----------------------------
+// -------- Top-bottom
+
+@mixin margin-tb($top, $bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
 }

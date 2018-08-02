@@ -1,0 +1,9 @@
+.conseil {
+  .background{
+    @include margin-tb($half-gutter-width, $half-gutter-width);    
+    @extend %flex;    
+    height: 256px;
+    padding: $gutter-width;
+  }
+}
+

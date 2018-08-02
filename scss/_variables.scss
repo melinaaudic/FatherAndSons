@@ -4,13 +4,19 @@
 // -------- real color
 $white: #FFFFFF;
 $black: #000000;
-$dark-grey: #333333;
-$light-grey: #ff0000;
+$dark-grey: #363434;
+$light-grey: #ededed;
+$orange: #e2a97e;
 
 // -------- background
-$color-background-primary: $white;
-$color-background-secondary: $dark-grey;
-$color-background-tertiary: $light-grey;
+$color-primary: $dark-grey;
+$color-secondary: $light-grey;
+$color-tertiary: $orange;
+
+// -------- background
+$color-background-primary: $dark-grey;
+$color-background-secondary: $light-grey;
+$color-background-tertiary: $orange;
 
 // -------- text
 $color-text-heading: $dark-grey;
@@ -22,33 +28,33 @@ $color-text-invert: $white;
 $color-text-strong: $color-text;
 $color-text-strong-invert: $color-text-invert;
 
-$color-text-link: $dark-grey;
+$color-text-link-dark: $dark-grey;
+$color-text-link-light: $light-grey;
 $color-text-link-visited: $dark-grey;
 $color-text-link-hover: $dark-grey;
 
 // -------- object
 $color-shadow: rgba ($dark-grey, .25);
-$border-color: $dark-grey;
+$border-color-dark: $dark-grey;
+$border-color-light: $white;
 
 // ----------------------------
 // --- font
 // ----------------------------
-// -------- google font : montserrat
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,500,500i);
-//$nomdelafont: 'nom de la font', sans-serif;
 // -------- local font : advent pro
-//@include font('nom de la font', 'chemin de la font', 'weight', 'style');
-// $nomdelafont : 'nom de la font', sans-serif;
+@include font('Advent Pro', '../fonts/AdventProLight', 300, normal);
+@include font('Advent Pro', '../fonts/AdventProRegular', 400, normal);
+@include font('Advent Pro', '../fonts/AdventProMedium', 500, normal);
+@include font('Advent Pro', '../fonts/AdventProSemiBold', 600, normal);
+@include font('Advent Pro', '../fonts/AdventProBold', 700, normal);
+$AdventPro: "Advent Pro", "Arial", sans-serif;
+
 // -------- font-weight
-$hairline-weight: 100;
-$thin-weight: 200;
 $light-weight: 300;
 $regular-weight: 400;
 $medium-weight: 500;
 $semibold-weight: 600;
 $bold-weight: 700;
-$xbold-weight: 800;
-$heavy-weight: 900;
 
 // -------- font-style
 $roman: normal;
@@ -57,7 +63,20 @@ $italic: italic;
 // -------- font-size
 $fz-small: 1.2;
 $fz-regular: 1.6;
-$fz-large: 2.4;
-$fz-x-large: 3.2;
-$fz-xx-large: 4.8;
+$fz-large: 2.3;
+$fz-x-large: 2.6;
+$fz-xx-large: 3.5;
 $fz-xxx-large: 6.4;
+
+
+// ----------------------------
+// --- extend
+// ----------------------------
+%flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}

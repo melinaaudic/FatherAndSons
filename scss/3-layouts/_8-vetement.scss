@@ -1,0 +1,10 @@
+.vetement {
+  .background {
+    @extend %flex;
+    min-height: 317px;
+    padding: $gutter-width;
+  }
+  div {
+    @include margin-tb($half-gutter-width, $half-gutter-width);
+  }
+}

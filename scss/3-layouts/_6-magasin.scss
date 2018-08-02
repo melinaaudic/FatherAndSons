@@ -1,0 +1,23 @@
+.magasin {
+  height: 100%;
+  padding: $gutter-width;
+  padding-left: $double-gutter-width + 33px;
+  box-sizing: border-box;
+  position: relative;
+  text-transform: uppercase;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(../medias/icon-location.svg);
+    width: 21px;
+    height: 33px;
+    left: 33px;
+  }
+  > * {
+    margin-bottom: $double-gutter-width;
+  }
+  .button {
+    border: none;
+  }
+}

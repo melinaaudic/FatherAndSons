@@ -1,0 +1,17 @@
+.costumes-contain {
+  @extend %flex;
+  @include margin-tb($half-gutter-width, $half-gutter-width);
+  @include background-image(url(../medias/collection-costumes.jpg), $white, 307px);
+}
+
+.casual-contain {
+  @extend %flex;
+  @include margin-tb($half-gutter-width, $half-gutter-width);
+  @include background-image(url(../medias/collection-casual.jpg), $white, 307px);
+}
+
+.vestes-contain {
+  @extend %flex;
+  @include margin-tb($half-gutter-width, $half-gutter-width);
+  @include background-image(url(../medias/collection-vestes.jpg), $white, 307px);
+}

@@ -1,0 +1,20 @@
+.offre {
+  @include background-image(url(../medias/background-offre.jpg), $white, 423px);
+}
+
+.bon-achat {
+  @include border-all(5px, solid, $border-color-light);
+  padding: $gutter-width ($half-gutter-width);
+  text-transform: uppercase;
+
+  span:first-child {
+    @include font-size(2.3);
+  }
+  span:nth-child(2) {
+    @include font-size(12.2);
+    line-height: 102px;
+  }
+  span:last-child {
+    @include font-size(4.9);
+  }
+}
