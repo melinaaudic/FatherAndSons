@@ -4,8 +4,8 @@ form {
     width: 100%;
     padding: 10px;
     font-family: $AdventPro;
-    box-shadow: 0;
     outline: none;
+    box-shadow: none;
     @include font-size($fz-regular);
     @include input-placeholder {
       @include font-size($fz-regular);
@@ -30,7 +30,6 @@ form {
   [class="field_missing"] {
     color: $color-background-tertiary;
   }
-
 }
 
 .timer {

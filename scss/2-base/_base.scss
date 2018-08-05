@@ -6,7 +6,17 @@ html {
   text-align: justify;
   * {
     box-sizing: border-box;
+  }
+}
 
+a {
+  text-decoration: none;
+}
+
+
+input {
+  &:required {
+    box-shadow: none;
   }
 }
 
@@ -14,19 +24,9 @@ html {
   display: none;
 }
 
-header,
-footer {
-  padding-top: 5px;
-  padding-bottom: 5px
-}
-
 .page-section {
   padding-top: $double-gutter-width;
   padding-bottom: $double-gutter-width;
-}
-
-a {
-  text-decoration: none;
 }
 
 .button {
